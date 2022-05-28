@@ -8,10 +8,8 @@ from typing import Optional, List
 import motor.motor_asyncio
 
 app = FastAPI()
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://m001-student:m001-mongodb-basics@sandrabox-m001.nvcl8.mongodb.net/test")
+client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["MONGODB_URL"])
 db = client.college
-
-
 
 class PyObjectId(ObjectId):
     @classmethod
