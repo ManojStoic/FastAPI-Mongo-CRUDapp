@@ -8,7 +8,7 @@ from typing import Optional, List
 import motor.motor_asyncio
 
 app = FastAPI()
-client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["MONGODB_URL"])
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://m001-student:m001-mongodb-basics@sandrabox-m001.nvcl8.mongodb.net/test")
 db = client.college
 
 
