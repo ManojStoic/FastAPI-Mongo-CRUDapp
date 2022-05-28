@@ -12,6 +12,7 @@ client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://m001-student:m001
 db = client.college
 
 
+
 class PyObjectId(ObjectId):
     @classmethod
     def __get_validators__(cls):
